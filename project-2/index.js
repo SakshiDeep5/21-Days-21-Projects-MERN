@@ -1,17 +1,17 @@
-const toggleBtn=document.getElementById("themeToggle");
+const toggleBtn = document.getElementById("themeToggle");
 
 toggleBtn.addEventListener("click", ()=> {
-document.body.classList.toggle("light-theme");
-const isLight = document.body.classList.contains("light-theme");
-toggleBtn.textContent = isLight ? "🌞" : "🌙";
+  document.body.classList.toggle("light-theme");
+  const isLight = document.body.classList.contains("light-theme");
+  toggleBtn.textContent = isLight ? "🌞" : "🌙";
 });
 
-const typedTextSpan=document.querySelector(".typed.text");
+const typedTextSpan=document.querySelector(".typed-text");
 const textArray=[
+    "Freelancer",
     "Software Engineer",
-    "Project Manager",
     "Web Developer",
-    "Category Lead",
+    "Data Analyst",
 ];
 
 const typingDelay=50;
