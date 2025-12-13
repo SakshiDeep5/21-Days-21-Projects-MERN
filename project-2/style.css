@@ -7,6 +7,7 @@
     --btn-text: #ffffff;
     --border-color: #334155;
     --subtle-text: #94a3b8;
+    --glow-color: rgba(139, 92, 246, 0.4);
 }
 
 .light-theme{
@@ -16,6 +17,7 @@
     --card-bg: #ffffff;
     --border-color: #e2e8f0;
     --subtle-text: #64748b;
+    --glow-color: rgba(124, 58, 237, 0.3);
 }
 
 *{
@@ -96,6 +98,8 @@ body{
     background: var(--accent-color);
     color: var(--btn-text);
     border-color: var(--accent-color);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--glow-color);
 }
 
 .hero{
@@ -410,4 +414,83 @@ form button{
 form button:hover{
     background: #fff;
     color: #0e3959;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 3rem 4%;
+  background: #0e3959;
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255,255,255,0.2);
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.footer-logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  background: var(--accent-gradient);
+  background-clip: text;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: var(--subtle-text);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent-color);
+}
+
+.footer-social {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-social a {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-color);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  background: var(--accent-color);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px var(--glow-color);
+}
+
+.footer-copyright {
+  color: var(--subtle-text);
+  font-size: 0.9rem;
+  margin-top: 0.8rem;
+}
+
+.footer-copyright i {
+  color: #ef4444;
+  animation: heartbeat 1.5s ease-in-out infinite;
 }
